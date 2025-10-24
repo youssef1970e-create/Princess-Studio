@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Princess Studio - Premium Design Studio</title>
+    <title>Princess Studio - Professional Networks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         :root {
             --primary-color: #e6a4b4;
@@ -17,6 +16,15 @@
             --gold-color: #d4af37;
             --text-color: #333;
             --white: #fff;
+            --linkedin-color: #0a66c2;
+            --behance-color: #0057ff;
+            --pinterest-color: #bd081c;
+            --dribbble-color: #ea4c89;
+            --instagram-color: #e4405f;
+            --facebook-color: #1877f2;
+            --telegram-color: #0088cc;
+            --upwork-color: #14a800;
+            --fiverr-color: #1dbf73;
         }
         
         * {
@@ -106,8 +114,7 @@
             background: linear-gradient(135deg, 
                 rgba(230, 164, 180, 0.9) 0%, 
                 rgba(243, 215, 202, 0.85) 50%, 
-                rgba(200, 107, 133, 0.9) 100%),
-                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f0f0"/><path d="M0 0L100 100M100 0L0 100" stroke="%23e6a4b4" stroke-width="1" opacity="0.1"/></svg>');
+                rgba(200, 107, 133, 0.9) 100%);
             background-size: cover;
             display: flex;
             align-items: center;
@@ -116,20 +123,6 @@
             overflow: hidden;
             text-align: center;
             padding: 0 20px;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(230, 164, 180, 0.1) 0%, transparent 50%);
-            z-index: 1;
         }
         
         .hero-content {
@@ -192,144 +185,15 @@
             z-index: 1;
         }
         
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--dark-color), var(--accent-color));
-            z-index: -1;
-            transition: opacity 0.4s ease;
-            opacity: 0;
-            border-radius: 50px;
-        }
-        
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(92, 58, 58, 0.4);
         }
         
-        .cta-button:hover::before {
-            opacity: 1;
-        }
-        
-        .floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .floating-element {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 15s infinite linear;
-        }
-        
-        .floating-element:nth-child(1) {
-            width: 120px;
-            height: 120px;
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
-        }
-        
-        .floating-element:nth-child(2) {
-            width: 80px;
-            height: 80px;
-            top: 20%;
-            right: 15%;
-            animation-delay: 2s;
-            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0) 70%);
-        }
-        
-        .floating-element:nth-child(3) {
-            width: 150px;
-            height: 150px;
-            bottom: 20%;
-            left: 5%;
-            animation-delay: 4s;
-            background: radial-gradient(circle, rgba(230,164,180,0.2) 0%, rgba(230,164,180,0) 70%);
-        }
-        
-        .floating-element:nth-child(4) {
-            width: 100px;
-            height: 100px;
-            bottom: 10%;
-            right: 10%;
-            animation-delay: 6s;
-            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
-        }
-        
-        .crown-decoration {
-            position: absolute;
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2.5rem;
-            color: var(--gold-color);
-            opacity: 0.7;
-            z-index: 2;
-            animation: crownGlow 3s infinite alternate;
-        }
-        
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--white);
-            font-size: 1.5rem;
-            animation: bounce 2s infinite;
-            z-index: 2;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-            }
-            100% {
-                transform: translateY(0) rotate(360deg);
-            }
-        }
-        
-        @keyframes crownGlow {
-            0% {
-                text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
-                transform: translateX(-50%) scale(1);
-            }
-            100% {
-                text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
-                transform: translateX(-50%) scale(1.1);
-            }
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-5px);
-            }
-        }
-        
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background-color: var(--white);
+        /* Professional Networks Section */
+        .professional-networks {
+            padding: 100px 0;
+            background-color: var(--light-color);
         }
         
         .section-title {
@@ -352,149 +216,290 @@
             background-color: var(--primary-color);
         }
         
-        .about-content {
+        .network-category {
+            margin-bottom: 80px;
+        }
+        
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 15px;
+            font-family: 'Playfair Display', serif;
         }
         
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s;
-        }
-        
-        .about-image:hover {
-            transform: scale(1.03);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Portfolio Section */
-        .portfolio {
-            padding: 80px 0;
-            background-color: var(--light-color);
-        }
-        
-        .portfolio-grid {
+        .networks-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
         }
         
-        .portfolio-item {
-            border-radius: 10px;
+        .network-card {
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
             position: relative;
             cursor: pointer;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s;
-        }
-        
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-            color: white;
-            padding: 20px;
-            transform: translateY(100%);
-            transition: transform 0.3s;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            transform: translateY(0);
-        }
-        
-        /* Tools Section */
-        .tools {
-            padding: 80px 0;
             background-color: var(--white);
-        }
-        
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-        
-        .tool-item {
-            padding: 20px;
-            border-radius: 10px;
-            background-color: var(--light-color);
-            transition: all 0.3s;
-        }
-        
-        .tool-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tool-item i {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-        }
-        
-        /* Social Section */
-        .social {
-            padding: 80px 0;
-            background-color: var(--light-color);
-            text-align: center;
-        }
-        
-        .social-links {
+            height: 100%;
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
+            flex-direction: column;
         }
         
-        .social-link {
+        .network-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .network-header {
+            padding: 25px 25px 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .network-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: var(--white);
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            text-decoration: none;
+            font-size: 1.8rem;
+            color: white;
         }
         
-        .social-link:hover {
+        .network-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .network-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .network-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .network-content p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            flex-grow: 1;
+        }
+        
+        .groups-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .group-tag {
+            background-color: var(--light-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .group-tag:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        .network-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 500;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .network-link:hover {
             background-color: var(--accent-color);
-            transform: translateY(-5px);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* LinkedIn Category */
+        .linkedin-category .category-title {
+            color: var(--linkedin-color);
+        }
+        
+        .linkedin-card .network-icon {
+            background-color: var(--linkedin-color);
+        }
+        
+        .linkedin-card .network-title {
+            color: var(--linkedin-color);
+        }
+        
+        .linkedin-card .network-link {
+            background-color: var(--linkedin-color);
+        }
+        
+        .linkedin-card .network-link:hover {
+            background-color: #004182;
+        }
+        
+        /* Freelance Category */
+        .freelance-category .category-title {
+            color: var(--upwork-color);
+        }
+        
+        .upwork-card .network-icon {
+            background-color: var(--upwork-color);
+        }
+        
+        .upwork-card .network-title {
+            color: var(--upwork-color);
+        }
+        
+        .upwork-card .network-link {
+            background-color: var(--upwork-color);
+        }
+        
+        .upwork-card .network-link:hover {
+            background-color: #0d8a00;
+        }
+        
+        .fiverr-card .network-icon {
+            background-color: var(--fiverr-color);
+        }
+        
+        .fiverr-card .network-title {
+            color: var(--fiverr-color);
+        }
+        
+        .fiverr-card .network-link {
+            background-color: var(--fiverr-color);
+        }
+        
+        .fiverr-card .network-link:hover {
+            background-color: #159e5c;
+        }
+        
+        .behance-card .network-icon {
+            background-color: var(--behance-color);
+        }
+        
+        .behance-card .network-title {
+            color: var(--behance-color);
+        }
+        
+        .behance-card .network-link {
+            background-color: var(--behance-color);
+        }
+        
+        .behance-card .network-link:hover {
+            background-color: #0044cc;
+        }
+        
+        /* Inspiration Category */
+        .inspiration-category .category-title {
+            color: var(--pinterest-color);
+        }
+        
+        .pinterest-card .network-icon {
+            background-color: var(--pinterest-color);
+        }
+        
+        .pinterest-card .network-title {
+            color: var(--pinterest-color);
+        }
+        
+        .pinterest-card .network-link {
+            background-color: var(--pinterest-color);
+        }
+        
+        .pinterest-card .network-link:hover {
+            background-color: #9c0615;
+        }
+        
+        .dribbble-card .network-icon {
+            background-color: var(--dribbble-color);
+        }
+        
+        .dribbble-card .network-title {
+            color: var(--dribbble-color);
+        }
+        
+        .dribbble-card .network-link {
+            background-color: var(--dribbble-color);
+        }
+        
+        .dribbble-card .network-link:hover {
+            background-color: #d63378;
+        }
+        
+        /* Social Category */
+        .social-category .category-title {
+            color: var(--instagram-color);
+        }
+        
+        .instagram-card .network-icon {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+        
+        .instagram-card .network-title {
+            color: var(--instagram-color);
+        }
+        
+        .instagram-card .network-link {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+        
+        .instagram-card .network-link:hover {
+            opacity: 0.9;
+        }
+        
+        .facebook-card .network-icon {
+            background-color: var(--facebook-color);
+        }
+        
+        .facebook-card .network-title {
+            color: var(--facebook-color);
+        }
+        
+        .facebook-card .network-link {
+            background-color: var(--facebook-color);
+        }
+        
+        .facebook-card .network-link:hover {
+            background-color: #0e62c9;
+        }
+        
+        .telegram-card .network-icon {
+            background-color: var(--telegram-color);
+        }
+        
+        .telegram-card .network-title {
+            color: var(--telegram-color);
+        }
+        
+        .telegram-card .network-link {
+            background-color: var(--telegram-color);
+        }
+        
+        .telegram-card .network-link:hover {
+            background-color: #0073b3;
         }
         
         /* Footer */
@@ -525,42 +530,6 @@
             width: 100%;
         }
         
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-        
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-        }
-        
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
@@ -588,10 +557,6 @@
                 right: 20px;
             }
             
-            .about-content {
-                flex-direction: column;
-            }
-            
             .studio-name {
                 font-size: clamp(3rem, 12vw, 5rem);
             }
@@ -604,6 +569,10 @@
             .cta-button {
                 padding: 12px 30px;
                 font-size: 1rem;
+            }
+            
+            .networks-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -623,9 +592,7 @@
                 <nav>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#networks">Professional Networks</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -635,147 +602,259 @@
 
     <!-- Enhanced Hero Section -->
     <section class="hero" id="home">
-        <div class="crown-decoration">
-            <i class="fas fa-crown"></i>
-        </div>
-        
-        <div class="floating-elements">
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-            <div class="floating-element"></div>
-        </div>
-        
         <div class="hero-content">
             <h1 class="studio-name">Princess Studio</h1>
             <p class="tagline">Where Elegance Meets Extraordinary Design</p>
-            <a href="#portfolio" class="cta-button">Discover Our Work</a>
-        </div>
-        
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+            <a href="#networks" class="cta-button">Explore Our Networks</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Professional Networks Section -->
+    <section class="professional-networks" id="networks">
         <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Princess Studio is a design studio specializing in providing creative and attractive solutions for clients. We believe that good design can make a big difference in the success of any project.</p>
-                    <p>Our team of talented designers work together to create unique designs that reflect your brand identity and effectively convey your message.</p>
-                    <p>We offer a wide range of design services including logo design, visual identities, graphic design, and web design.</p>
-                    <a href="#contact" class="cta-button" style="margin-top: 20px;">Contact Us</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Princess Studio Team">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Our Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Logo Design">
-                    <div class="portfolio-overlay">
-                        <h3>Logo Design</h3>
-                        <p>Innovative logo design for a new brand</p>
+            <h2 class="section-title">Professional Networks</h2>
+            
+            <!-- LinkedIn Section -->
+            <div class="network-category linkedin-category">
+                <h2 class="category-title">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn - Professional Networks
+                </h2>
+                <div class="networks-grid">
+                    <!-- LinkedIn Profile -->
+                    <div class="network-card linkedin-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <h3 class="network-title">LinkedIn Profile</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1611944212120-8d5e0829ea2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LinkedIn Profile">
+                        <div class="network-content">
+                            <p>Connect with us professionally on LinkedIn. Stay updated with our latest projects, industry insights, and career opportunities.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">UI/UX Designers</span>
+                                <span class="group-tag">Logo Designers</span>
+                                <span class="group-tag">Creative Directors</span>
+                            </div>
+                            <a href="#" class="network-link">Visit Profile</a>
+                        </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Graphic Design">
-                    <div class="portfolio-overlay">
-                        <h3>Graphic Design</h3>
-                        <p>Promotional materials for an advertising campaign</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1558655146-db6e309e3f59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Web Design">
-                    <div class="portfolio-overlay">
-                        <h3>Web Design</h3>
-                        <p>Responsive and attractive website design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1561070791-4d1a64d6b59d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Visual Identity">
-                    <div class="portfolio-overlay">
-                        <h3>Visual Identity</h3>
-                        <p>Complete visual identity development for a startup</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Branding">
-                    <div class="portfolio-overlay">
-                        <h3>Branding</h3>
-                        <p>Complete branding package for a fashion brand</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1561070791-8a8d02e5d6c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Packaging Design">
-                    <div class="portfolio-overlay">
-                        <h3>Packaging Design</h3>
-                        <p>Creative packaging for a cosmetic product line</p>
+                    
+                    <!-- LinkedIn Groups -->
+                    <div class="network-card linkedin-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="network-title">LinkedIn Groups</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LinkedIn Groups">
+                        <div class="network-content">
+                            <p>Join our professional LinkedIn groups focused on design trends, career development, and creative discussions.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">UI & UX Group</span>
+                                <span class="group-tag">Logos Group</span>
+                                <span class="group-tag">Posters Group</span>
+                                <span class="group-tag">Branding Group</span>
+                            </div>
+                            <a href="#" class="network-link">Explore Groups</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Tools Section -->
-    <section class="tools" id="tools">
-        <div class="container">
-            <h2 class="section-title">Tools & Technologies</h2>
-            <div class="tools-grid">
-                <div class="tool-item">
-                    <i class="fab fa-adobe"></i>
-                    <h3>Adobe Creative Suite</h3>
-                </div>
-                <div class="tool-item">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Adobe Illustrator</h3>
-                </div>
-                <div class="tool-item">
-                    <i class="fas fa-image"></i>
-                    <h3>Adobe Photoshop</h3>
-                </div>
-                <div class="tool-item">
-                    <i class="fas fa-film"></i>
-                    <h3>Adobe After Effects</h3>
-                </div>
-                <div class="tool-item">
-                    <i class="fas fa-desktop"></i>
-                    <h3>Figma</h3>
-                </div>
-                <div class="tool-item">
-                    <i class="fas fa-cube"></i>
-                    <h3>Blender</h3>
+            
+            <!-- Freelance Platforms Section -->
+            <div class="network-category freelance-category">
+                <h2 class="category-title">
+                    <i class="fas fa-laptop-code"></i>
+                    Freelance Platforms
+                </h2>
+                <div class="networks-grid">
+                    <!-- Upwork -->
+                    <div class="network-card upwork-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3 class="network-title">Upwork</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Upwork">
+                        <div class="network-content">
+                            <p>Check out our Upwork profile where we offer graphic design, UI/UX, and brand identity services to clients worldwide.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">Graphic Design</span>
+                                <span class="group-tag">UI/UX Design</span>
+                                <span class="group-tag">Brand Identity</span>
+                            </div>
+                            <a href="#" class="network-link">Visit Profile</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Fiverr -->
+                    <div class="network-card fiverr-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="network-title">Fiverr</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fiverr">
+                        <div class="network-content">
+                            <p>Discover our quick services on Fiverr for logo design, promotional materials, and social media design.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">Logo Design</span>
+                                <span class="group-tag">Social Media</span>
+                                <span class="group-tag">Business Cards</span>
+                            </div>
+                            <a href="#" class="network-link">Explore Services</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Behance -->
+                    <div class="network-card behance-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fab fa-behance"></i>
+                            </div>
+                            <h3 class="network-title">Behance</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Behance">
+                        <div class="network-content">
+                            <p>Browse our complete portfolio on Behance featuring branding, UI/UX, and graphic design projects.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">Portfolio</span>
+                                <span class="group-tag">Case Studies</span>
+                                <span class="group-tag">Creative Work</span>
+                            </div>
+                            <a href="#" class="network-link">View Portfolio</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Social Section -->
-    <section class="social" id="contact">
-        <div class="container">
-            <h2 class="section-title">Connect With Us</h2>
-            <p>Follow us on social media to see our latest work</p>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            
+            <!-- Inspiration Platforms Section -->
+            <div class="network-category inspiration-category">
+                <h2 class="category-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Inspiration & Creative Platforms
+                </h2>
+                <div class="networks-grid">
+                    <!-- Pinterest -->
+                    <div class="network-card pinterest-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fab fa-pinterest"></i>
+                            </div>
+                            <h3 class="network-title">Pinterest</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1561070791-4d1a64d6b59d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pinterest">
+                        <div class="network-content">
+                            <p>Follow our curated Pinterest boards for design inspiration, color palettes, typography, and creative ideas.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">Design Inspiration</span>
+                                <span class="group-tag">Color Palettes</span>
+                                <span class="group-tag">Typography</span>
+                            </div>
+                            <a href="#" class="network-link">Follow Boards</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Dribbble -->
+                    <div class="network-card dribbble-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fab fa-dribbble"></i>
+                            </div>
+                            <h3 class="network-title">Dribbble</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1558655146-db6e309e3f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dribbble">
+                        <div class="network-content">
+                            <p>Check out our latest design shots, UI/UX concepts, and creative explorations in our Dribbble profile.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">UI Shots</span>
+                                <span class="group-tag">Illustrations</span>
+                                <span class="group-tag">Animations</span>
+                            </div>
+                            <a href="#" class="network-link">View Shots</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="network-category social-category">
+                <h2 class="category-title">
+                    <i class="fas fa-share-alt"></i>
+                    Social Media
+                </h2>
+                <div class="networks-grid">
+                    <!-- Instagram -->
+                    <div class="network-card instagram-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <h3 class="network-title">Instagram</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Instagram">
+                        <div class="network-content">
+                            <p>Follow us on Instagram for behind-the-scenes content, design processes, and our latest creative work.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">Behind the Scenes</span>
+                                <span class="group-tag">Design Process</span>
+                                <span class="group-tag">Daily Inspiration</span>
+                            </div>
+                            <a href="#" class="network-link">Follow Account</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Facebook -->
+                    <div class="network-card facebook-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <h3 class="network-title">Facebook</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1633675254053-d96c7668c3b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Facebook">
+                        <div class="network-content">
+                            <p>Join our Facebook page to interact with our community, participate in contests, and stay updated with the latest news.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">Community</span>
+                                <span class="group-tag">Contests</span>
+                                <span class="group-tag">Updates</span>
+                            </div>
+                            <a href="#" class="network-link">Visit Page</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Telegram -->
+                    <div class="network-card telegram-card">
+                        <div class="network-header">
+                            <div class="network-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <h3 class="network-title">Telegram</h3>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Telegram">
+                        <div class="network-content">
+                            <p>Subscribe to our Telegram channel to receive the latest updates, design tips, and important announcements.</p>
+                            <div class="groups-list">
+                                <span class="group-tag">Updates</span>
+                                <span class="group-tag">Design Tips</span>
+                                <span class="group-tag">Announcements</span>
+                            </div>
+                            <a href="#" class="network-link">Subscribe to Channel</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -788,14 +867,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <span class="lightbox-close">&times;</span>
-            <img id="lightbox-img" src="" alt="">
-        </div>
-    </div>
 
     <script>
         // Mobile menu toggle
@@ -823,93 +894,30 @@
             });
         });
         
-        // Enhanced floating elements animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const floatingElements = document.querySelectorAll('.floating-element');
+        // Add scroll animations
+        function checkScroll() {
+            const elements = document.querySelectorAll('.network-category');
             
-            floatingElements.forEach((element, index) => {
-                // Randomize initial positions and animations
-                const randomX = Math.random() * 80 + 10;
-                const randomY = Math.random() * 80 + 10;
-                const randomDelay = Math.random() * 10;
-                const randomDuration = Math.random() * 10 + 15;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
                 
-                element.style.left = `${randomX}%`;
-                element.style.top = `${randomY}%`;
-                element.style.animationDelay = `${randomDelay}s`;
-                element.style.animationDuration = `${randomDuration}s`;
-            });
-            
-            // Add scroll functionality
-            document.querySelector('.scroll-indicator').addEventListener('click', function() {
-                window.scrollTo({
-                    top: window.innerHeight,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Add parallax effect on mouse move
-            document.querySelector('.hero').addEventListener('mousemove', function(e) {
-                const moveX = (e.clientX - window.innerWidth / 2) / 50;
-                const moveY = (e.clientY - window.innerHeight / 2) / 50;
-                
-                document.querySelector('.studio-name').style.transform = `translate(${moveX}px, ${moveY}px)`;
-                document.querySelector('.tagline').style.transform = `translate(${moveX * 0.7}px, ${moveY * 0.7}px)`;
-                document.querySelector('.cta-button').style.transform = `translate(${moveX * 0.5}px, ${moveY * 0.5}px)`;
-            });
-            
-            // Portfolio lightbox functionality
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxClose = document.querySelector('.lightbox-close');
-            
-            portfolioItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const imgSrc = this.querySelector('img').src;
-                    lightboxImg.src = imgSrc;
-                    lightbox.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            
-            lightboxClose.addEventListener('click', function() {
-                lightbox.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-            
-            lightbox.addEventListener('click', function(e) {
-                if (e.target === lightbox) {
-                    lightbox.style.display = 'none';
-                    document.body.style.overflow = 'auto';
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
                 }
             });
-            
-            // Add scroll animations
-            function checkScroll() {
-                const elements = document.querySelectorAll('.about-content, .portfolio-grid, .tools-grid');
-                
-                elements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (elementTop < windowHeight - 100) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-            
-            // Initialize elements for animation
-            document.querySelectorAll('.about-content, .portfolio-grid, .tools-grid').forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            });
-            
-            window.addEventListener('scroll', checkScroll);
-            window.addEventListener('load', checkScroll);
+        }
+        
+        // Initialize elements for animation
+        document.querySelectorAll('.network-category').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         });
+        
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
     </script>
 </body>
 </html>
